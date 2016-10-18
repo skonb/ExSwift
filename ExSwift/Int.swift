@@ -16,7 +16,7 @@ public extension Int {
         - parameter function: Function to call
     */
     func times <T> (_ function: @escaping (Void) -> T) {
-        (0..<self).each { _ in _ = function(); return }
+        (0..<self).forEach { _ in _ = function(); return }
     }
 
     /**
@@ -25,7 +25,7 @@ public extension Int {
         - parameter function: Function to call
     */
     func times (_ function: @escaping (Void) -> Void) {
-        (0..<self).each { _ in _ = function(); return }
+        (0..<self).forEach { _ in _ = function(); return }
     }
 
     /**
@@ -34,7 +34,7 @@ public extension Int {
         - parameter function: Function to call
     */
     func times <T> (_ function: @escaping (Int) -> T) {
-        (0..<self).each { index in _ = function(index); return }
+        (0..<self).forEach { index in _ = function(index); return }
     }
 
     /**

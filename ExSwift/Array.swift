@@ -90,7 +90,7 @@ public extension Array {
 
             //  find common elements and save them in first set
             //  to intersect in the next loop
-            value.each { (item: U) -> Void in
+            value.forEach { (item: U) -> Void in
                 if result.contains(item) {
                     intersection.append(item as! Element)
                 }
@@ -836,7 +836,7 @@ public extension Array {
         }
         
         var indexes: [Int] = []
-        length.times {
+        length.times { (i: Int) in
             indexes.append(0)
         }
         
@@ -959,7 +959,7 @@ public extension Array {
         let maxWidth: Int = array.map({ $0.count }).max()
         var transposition = [[Element]](repeating: [], count: maxWidth)
         
-        (0..<maxWidth).each { i in
+        (0..<maxWidth).forEach { i in
             array.eachIndex { j in
                 if array[j].count > i {
                     transposition[i].append(array[j][i])
@@ -1010,7 +1010,7 @@ public extension Array {
         
         var mapped = [V]()
         
-        each { (value: Element) -> Void in
+        forEach { (value: Element) -> Void in
             if let mappedValue = map(value) {
                 mapped.append(mappedValue)
             }
@@ -1032,7 +1032,7 @@ public extension Array {
         var mapped = [V]()
         var acc = initial
         
-        each { (value: Element) -> Void in
+        forEach { (value: Element) -> Void in
             let (mappedAcc, mappedValue) = map(acc, value)
             acc = mappedAcc
             mapped.append(mappedValue)

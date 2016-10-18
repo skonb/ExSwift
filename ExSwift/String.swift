@@ -234,7 +234,7 @@ public extension String {
         var result = String()
         let max = charset.length - 1
 
-        len.times {
+        len.times { (i: Int) in
             result += charset[Int.random(0, max: max)]!
         }
 
@@ -345,7 +345,7 @@ public func * (first: String, n: Int) -> String {
 
     var result = String()
 
-    n.times {
+    n.times { (i: Int) in
         result += first
     }
 

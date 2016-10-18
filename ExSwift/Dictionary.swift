@@ -51,7 +51,7 @@ internal extension Dictionary {
 
         var result = self
 
-        dictionaries.each { (dictionary) -> Void in
+        dictionaries.forEach { (dictionary) -> Void in
             dictionary.each { (key, value) -> Void in
                 _ = result.updateValue(value, forKey: key)
             }
